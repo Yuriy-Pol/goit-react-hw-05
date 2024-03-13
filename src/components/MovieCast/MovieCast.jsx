@@ -30,7 +30,7 @@ export default function MovieReviews() {
 
   return (
     <div className="">
-      {Object.keys(cast).length !== 0 && (
+      {cast && Object.keys(cast).length !== 0 ? (
         <ul>
           {cast.map(actor => {
             return (
@@ -46,6 +46,8 @@ export default function MovieReviews() {
             );
           })}
         </ul>
+      ) : (
+        <p>No cast information available</p>
       )}
 
       {error && <p>error</p>}

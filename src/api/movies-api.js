@@ -11,19 +11,25 @@ axios.defaults.params = {
 };
 
 export function fetchTrendingMovies() {
-  return axios.get('trending/movie/day');
+  return axios.get(
+    'https://api.themoviedb.org/3/trending/movie/day?include_adult=false&language=en-US&page=1'
+  );
 }
 
 export function fetchMovieDetails(id) {
-  return axios.get(`movie/${id}`);
+  return axios.get(`https://api.themoviedb.org/3/movie/${id}?language=en-US`);
 }
 
 export function fetchMovieCast(id) {
-  return axios.get(`movie/${id}/credits`);
+  return axios.get(
+    `https://api.themoviedb.org/3/movie/${id}/credits?language=en-US`
+  );
 }
 
 export function fetchMovieReview(id) {
-  return axios.get(`movie/${id}/reviews`);
+  return axios.get(
+    `https://api.themoviedb.org/3/movie/${id}/reviews?language=en-US&page=1`
+  );
 }
 
 export function searchMovies(query) {

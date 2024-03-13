@@ -46,12 +46,12 @@ export default function MovieReviews() {
           </ul>
         )}
 
-        {noReviews && <p> We don&apos;t have any reviews for this movie</p>}
+        {noReviews && <p>We don&apos;t have any reviews for this movie</p>}
 
         {loading && <p>loading...</p>}
       </>
     );
   } else {
-    <p>error</p>;
+    return <p>error</p>;
   }
 }

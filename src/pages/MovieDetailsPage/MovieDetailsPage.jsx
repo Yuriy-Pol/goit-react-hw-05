@@ -89,7 +89,7 @@ export default function MovieDetailsPage() {
 
             <ul>
               <li>
-                <NavLink className={buildNavLink} to="credits">
+                <NavLink className={buildNavLink} to="cast">
                   Cast
                 </NavLink>
               </li>
